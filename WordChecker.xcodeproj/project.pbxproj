@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A170846259BBB41004FEB68 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A170845259BBB41004FEB68 /* words.txt */; };
 		5A8BA7B2259B729D00F9998E /* WordCheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BA7B1259B729D00F9998E /* WordCheckerApp.swift */; };
 		5A8BA7B4259B729D00F9998E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BA7B3259B729D00F9998E /* ContentView.swift */; };
 		5A8BA7B6259B72A000F9998E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BA7B5259B72A000F9998E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A170845259BBB41004FEB68 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		5A8BA7AE259B729D00F9998E /* WordChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8BA7B1259B729D00F9998E /* WordCheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCheckerApp.swift; sourceTree = "<group>"; };
 		5A8BA7B3259B729D00F9998E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		5A8BA7B0259B729D00F9998E /* WordChecker */ = {
 			isa = PBXGroup;
 			children = (
+				5A170845259BBB41004FEB68 /* words.txt */,
 				5A8BA7B1259B729D00F9998E /* WordCheckerApp.swift */,
 				5A8BA7B3259B729D00F9998E /* ContentView.swift */,
 				5A8BA7B5259B72A000F9998E /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A170846259BBB41004FEB68 /* words.txt in Resources */,
 				5A8BA7B9259B72A000F9998E /* Preview Assets.xcassets in Resources */,
 				5A8BA7B6259B72A000F9998E /* Assets.xcassets in Resources */,
 			);
