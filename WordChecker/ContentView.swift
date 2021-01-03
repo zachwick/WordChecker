@@ -11,6 +11,7 @@ struct ContentView: View {
 
     @State var textFieldInput: String = ""
     @State var predictableValues: Array<String> = []
+    @State var all_words_in_universe: Array<String> = []
     @State var predictedValue: Array<String> = []
     @State var validWord: Bool = false
     @State var allTwoLetterWords: Array<String> = []
@@ -20,6 +21,7 @@ struct ContentView: View {
           if let startWords = try? String(contentsOf: startWordsURL) {
              let allWords = startWords.components(separatedBy: "\n")
                 predictableValues = allWords
+                all_words_in_universe = allWords
                 allTwoLetterWords = twoLetterWords()
                 return
           }
@@ -28,14 +30,18 @@ struct ContentView: View {
     }
 
     func showMatches() {
-        predictedValue = predictableValues.filter { (item: String) -> Bool in
+        let new_predictedValue = predictableValues.filter { (item: String) -> Bool in
             let stringMatch = item.lowercased().starts(with: textFieldInput.lowercased())
             return stringMatch
         }
+
+        // Where/how to reset predictableValues for use in a recursive function?
+        predictableValues = new_predictedValue
+        predictedValue = new_predictedValue
     }
 
     func twoLetterWords() -> Array<String> {
-        return predictableValues.filter { (item: String) -> Bool in
+        return all_words_in_universe.filter { (item: String) -> Bool in
             return item.lowercased().count == 2
         }
     }
@@ -47,6 +53,7 @@ struct ContentView: View {
                     .onChange(of: textFieldInput, perform: { value in
                         if (textFieldInput == "") {
                             predictedValue = []
+                            predictableValues = all_words_in_universe
                         } else {
                             showMatches()
                         }
