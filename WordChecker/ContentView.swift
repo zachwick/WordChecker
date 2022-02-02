@@ -60,7 +60,9 @@ struct ContentView: View {
                     })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .font(.largeTitle)
-                List(self.predictedValue, id: \.self){
+                List(self.predictedValue.sorted {
+                    $0.count < $1.count
+                }, id: \.self){
                     Text($0)
                 }
                 .navigationTitle("Check a word")
